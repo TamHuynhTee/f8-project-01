@@ -22,6 +22,8 @@
   --newsletter-bg-color: #063183;
   --newsletter-button-color: #002366;
 
+  --header-height: 736px;
+
   --radius-base: 12px;
 }
 
@@ -86,8 +88,14 @@ h2.title {
 /* HEADER */
 header.header {
   background: var(--header-bg-color);
-  height: 100vh;
+  height: var(--header-height);
   padding-top: 3.8rem;
+}
+
+header.header .container {
+  height: calc(var(--header-height) - 3.8rem);
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
@@ -132,6 +140,9 @@ header.header {
   margin-top: 130px;
   display: flex;
   gap: 6.7rem;
+  /* position: relative;
+  width: 100%;
+  flex-grow: 1; */
 }
 
 .hero .info {
@@ -167,7 +178,11 @@ header.header {
 }
 
 .hero .hero-img {
-  margin-top: -78px;
+  /* position: absolute;
+  bottom: 0;
+  right: -0; */
+  width: 52.6%;
+  margin-top: -91px;
   margin-right: -100px;
 }
 
